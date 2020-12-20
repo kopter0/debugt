@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 965a82be754f5e44ca087be9b13fe76f
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robot 5
+    second: {fileID: 2100000, guid: eaf14c9af05fba5409ad54601fe0bc20, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Robot_5(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robot 5
+      parentName: Robot_5(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Main Body
+      parentName: Robot_5(Clone)
+      position: {x: 0, y: 1.8696532, z: 0.19915561}
+      rotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: R gun
+      parentName: Main Body
+      position: {x: 0.8490048, y: -0.20224948, z: 0.11185882}
+      rotation: {x: 0.000000029802326, y: -0.15643448, z: -0, w: 0.98768836}
+      scale: {x: 1, y: 1.0000006, z: 1.0000007}
+    - name: R Back Leg 1
+      parentName: Main Body
+      position: {x: 0.41713634, y: 0.19915564, z: -0.3898387}
+      rotation: {x: 0.48131204, y: -0.5518724, z: 0.55691814, w: 0.39194113}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: R Back Leg 2
+      parentName: R Back Leg 1
+      position: {x: -0.6016443, y: 0.00000015258789, z: 0.00000015258789}
+      rotation: {x: -0.44235212, y: 0.08156415, z: -0.23083052, w: 0.86277986}
+      scale: {x: 1, y: 0.9999997, z: 0.99999994}
+    - name: R Back Leg IK
+      parentName: R Back Leg 2
+      position: {x: -0.7572878, y: -0.000000038146972, z: 0.00000022888183}
+      rotation: {x: 0.60074234, y: -0.18228455, z: 0.06270048, w: 0.7758542}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L Gun
+      parentName: Main Body
+      position: {x: -0.8489999, y: -0.20224948, z: 0.11185882}
+      rotation: {x: 0.000000029802326, y: 0.15643454, z: -0, w: 0.98768836}
+      scale: {x: 1, y: 1.0000006, z: 1.0000006}
+    - name: L Back Leg 1
+      parentName: Main Body
+      position: {x: -0.41714, y: 0.19915564, z: -0.3898387}
+      rotation: {x: 0.55187243, y: -0.48131195, z: 0.39194107, w: 0.5569182}
+      scale: {x: 1, y: 1.0000002, z: 1.0000005}
+    - name: L Back Leg 2
+      parentName: L Back Leg 1
+      position: {x: -0.6016442, y: -0.00000022888183, z: 0.00000015258789}
+      rotation: {x: 0.442352, y: 0.081564486, z: 0.23083088, w: 0.8627798}
+      scale: {x: 1.0000004, y: 1, z: 1}
+    - name: L Back Leg IK
+      parentName: L Back Leg 2
+      position: {x: -0.75728786, y: 0.00000019073485, z: -0.000000076293944}
+      rotation: {x: -0.60074216, y: -0.18228512, z: -0.06270127, w: 0.7758541}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R Front Leg 1
+      parentName: Main Body
+      position: {x: 0.39653018, y: -0.3644603, z: -0.42623678}
+      rotation: {x: -0.5975578, y: -0.25964352, z: 0.7581825, w: -0.025870176}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: R Front Leg 2
+      parentName: R Front Leg 1
+      position: {x: -0.52559763, y: 0.000000076293944, z: 0.00000015258789}
+      rotation: {x: -0.39986506, y: -0.28895748, z: -0.3784095, w: 0.7832099}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: R Front Leg IK
+      parentName: R Front Leg 2
+      position: {x: -0.56475157, y: -0.000000076293944, z: 0.000000114440915}
+      rotation: {x: 0.28473997, y: -0.07582987, z: 0.09417743, w: 0.95094883}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L Front Leg 1
+      parentName: Main Body
+      position: {x: -0.39652994, y: -0.3644603, z: -0.42623678}
+      rotation: {x: 0.5957893, y: -0.120408416, z: 0.48946792, w: 0.62526643}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: L Front Leg 2
+      parentName: L Front Leg 1
+      position: {x: -0.5255976, y: -0.00000015258789, z: 0.00000015258789}
+      rotation: {x: 0.4120503, y: -0.022089824, z: 0.15436, w: 0.89771914}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: L Front Leg IK
+      parentName: L Front Leg 2
+      position: {x: -0.5647514, y: 0.00000015258789, z: -0.000000038146972}
+      rotation: {x: -0.2847395, y: -0.075829916, z: -0.09417739, w: 0.95094895}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Main Body
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

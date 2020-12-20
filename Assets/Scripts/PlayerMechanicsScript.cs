@@ -13,7 +13,7 @@ public class PlayerMechanicsScript : MonoBehaviour
     private Vector3 initialPos;
     private Quaternion initialRot;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         initialPos = transform.position;
         initialRot = transform.rotation;
@@ -37,4 +37,6 @@ public class PlayerMechanicsScript : MonoBehaviour
         transform.rotation = initialRot;
         stressLevel = 0;
     }
+
+
 }

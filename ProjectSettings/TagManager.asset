@@ -9,6 +9,8 @@ TagManager:
   - SecondCamera
   - BulletSpawn
   - Weapon
+  - Heal
+  - boss
   layers:
   - Default
   - TransparentFX

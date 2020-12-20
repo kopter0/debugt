@@ -25,7 +25,7 @@ public class GunInventory : MonoBehaviour {
 	 * Also will spawn a weapon upon start.
 	 */
 	void Awake(){
-		StartCoroutine("UpdateIconsFromResources");
+		//StartCoroutine("UpdateIconsFromResources");
 
 		StartCoroutine ("SpawnWeaponUponStart");//to start with a gun
 
@@ -48,10 +48,10 @@ public class GunInventory : MonoBehaviour {
 	 */
 	void Update(){
 
-		switchWeaponCooldown += 1 * Time.deltaTime;
-		if(switchWeaponCooldown > 1.2f && Input.GetKey(KeyCode.LeftShift) == false){
-			Create_Weapon();
-		}
+		//switchWeaponCooldown += 1 * Time.deltaTime;
+		//if(switchWeaponCooldown > 1.2f && Input.GetKey(KeyCode.LeftShift) == false){
+		//	Create_Weapon();
+		//}
 
 	}
 
@@ -181,7 +181,7 @@ public class GunInventory : MonoBehaviour {
 
 		if(currentGun){
 			for(int i = 0; i < gunsIHave.Count; i++){
-				DrawCorrespondingImage(i);
+				//DrawCorrespondingImage(i);
 			}
 		}
 

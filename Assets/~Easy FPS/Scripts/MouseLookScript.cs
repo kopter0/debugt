@@ -6,12 +6,14 @@ public class MouseLookScript : MonoBehaviour {
 
 	[HideInInspector]
 	public Transform myCamera;
+	GameControllerScript gcs;
 	/*
 	 * Hiding the cursor.
 	 */
 	void Awake(){
 		Cursor.lockState = CursorLockMode.Locked;
 		myCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+		gcs = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>();
 	}
 
 	/*
@@ -19,18 +21,19 @@ public class MouseLookScript : MonoBehaviour {
 	* Triggering the headbob camera omvement if player is faster than 1 of speed
 	*/
 	void  Update(){
+		if (gcs.gameState.Equals(GameControllerScript.GameState.GamePlay))
+        {
+			MouseInputMovement();
 
-		MouseInputMovement();
+			if (Input.GetKeyDown (KeyCode.L)) {
+				Cursor.lockState = CursorLockMode.Locked;
 
-		if (Input.GetKeyDown (KeyCode.L)) {
-			Cursor.lockState = CursorLockMode.Locked;
+			}
+			deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
 
-		}
-		deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-
-		if(GetComponent<PlayerMovementScript>().currentSpeed > 1)
-			HeadMovement ();
-
+			if(GetComponent<PlayerMovementScript>().currentSpeed > 1)
+				HeadMovement ();
+        }
 	}
 
 	[Header("Z Rotation Camera")]

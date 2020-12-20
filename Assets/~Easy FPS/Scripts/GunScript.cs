@@ -37,6 +37,8 @@ public class GunScript : MonoBehaviour {
 
 	private GameControllerScript gcs;
 
+	public GameObject bulletPrefab;
+	public float bulletSpeed;
 	/*
 	 * Collection the variables upon awake that we need.
 	 */
@@ -89,19 +91,24 @@ public class GunScript : MonoBehaviour {
 	*/
 	void Update(){
 
-		Animations();
+		if (gcs.gameState == GameControllerScript.GameState.GamePlay)
+        {
 
-		GiveCameraScriptMySensitvity();
+			Animations();
 
-		PositionGun();
+			GiveCameraScriptMySensitvity();
 
-		Shooting();
-		MeeleAttack();
-		LockCameraWhileMelee ();
+			PositionGun();
 
-		Sprint(); //iff we have the gun you sprint from here, if we are gunless then its called from movement script
+			Shooting();
+			//MeeleAttack();
+			LockCameraWhileMelee ();
 
-		CrossHairExpansionWhenWalking();
+			//Sprint(); //iff we have the gun you sprint from here, if we are gunless then its called from movement script
+
+			CrossHairExpansionWhenWalking();
+
+        }
 
 
 	}
@@ -114,7 +121,7 @@ public class GunScript : MonoBehaviour {
 	void FixedUpdate(){
 		RotationGun ();
 
-		MeeleAnimationsStates ();
+		//MeeleAnimationsStates ();
 
 		/*
 		 * Changing some values if we are aiming, like sensitity, zoom racion and position of the waepon.
@@ -425,18 +432,22 @@ public class GunScript : MonoBehaviour {
 	 * Creates bullets and muzzle flashes and calls for Recoil.
 	 */
 	private void ShootMethod(){
-		if(waitTillNextFire <= 0 && !reloading && pmS.maxSpeed < 5){
+		if(waitTillNextFire <= 0 && !reloading && pmS.maxSpeed < 15){
 
 			//if(bulletsInTheGun > 0){
 			if (pMechS.stressLevel < pMechS.maxStress) { 
 
 				int randomNumberForMuzzelFlash = Random.Range(0,5);
-				if (bullet)
-					Instantiate (bullet, bulletSpawnPlace.transform.position, bulletSpawnPlace.transform.rotation);
-				else
-					print ("Missing the bullet prefab");
-				holdFlash = Instantiate(muzzelFlash[randomNumberForMuzzelFlash], muzzelSpawn.transform.position /*- muzzelPosition*/, muzzelSpawn.transform.rotation * Quaternion.Euler(0,0,90) ) as GameObject;
-				holdFlash.transform.parent = muzzelSpawn.transform;
+				//if (bullet)
+				//	Instantiate (bullet, bulletSpawnPlace.transform.position, bulletSpawnPlace.transform.rotation);
+				//else
+				//	print ("Missing the bullet prefab");
+				//holdFlash = Instantiate(muzzelFlash[randomNumberForMuzzelFlash], muzzelSpawn.transform.position /*- muzzelPosition*/, muzzelSpawn.transform.rotation * Quaternion.Euler(0,0,90) ) as GameObject;
+				//holdFlash.transform.parent = muzzelSpawn.transform;
+
+				GameObject bul = Instantiate(bulletPrefab, muzzelSpawn.transform.position, muzzelSpawn.transform.rotation);
+				bul.GetComponent<PlayerBullets>().SetDirectionAndSpeed(bulletSpawnPlace.transform.forward, bulletSpeed);
+
 				if (shoot_sound_source)
 					shoot_sound_source.Play ();
 				else
@@ -534,7 +545,7 @@ public class GunScript : MonoBehaviour {
 			HUD_bullets.text = (100 - 100 * pMechS.stressLevel / pMechS.maxStress).ToString() + "%";
 			//HUD_bullets.text = bulletsIHave.ToString() + " - " + bulletsInTheGun.ToString();
 
-		if (!gcs.gameEnded)
+		if (gcs.gameState == GameControllerScript.GameState.GamePlay)
         {
 			DrawCrosshair();
         }

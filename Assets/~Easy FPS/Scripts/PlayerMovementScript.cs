@@ -99,9 +99,9 @@ public class PlayerMovementScript : MonoBehaviour {
 		
 		if (!gamePaused)
         {
-			Jumping ();
+			//Jumping ();
 
-			Crouching();
+			//Crouching();
 
 			WalkingSound();
         }
@@ -115,14 +115,14 @@ public class PlayerMovementScript : MonoBehaviour {
 			if (RayCastGrounded ()) { //for walk sounsd using this because suraface is not straigh			
 				if (currentSpeed > 1) {
 					//				print ("unutra sam");
-					if (maxSpeed == 3) {
+					if (maxSpeed == 10) {
 						//	print ("tu sem");
 						if (!_walkSound.isPlaying) {
 							//	print ("playam hod");
 							_walkSound.Play ();
 							_runSound.Stop ();
 						}					
-					} else if (maxSpeed == 5) {
+					} else if (maxSpeed == 15) {
 						//	print ("NE tu sem");
 
 						if (!_runSound.isPlaying) {
