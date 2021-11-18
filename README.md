@@ -1,6 +1,6 @@
-# debugt
-Game Development Course Project
-FPS game
-Goal Eliminate major bugs to build your project
-Game Demo:
-Game Build: 
+# Debugt!
+Game Development Course Project <br/>
+FPS <br/>
+Goal Eliminate major bugs to build your project <br/>
+[Game Demo](https://youtu.be/9KeWaHImbUI) <br/>
+[Game Build]() 
